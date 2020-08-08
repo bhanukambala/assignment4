@@ -17,13 +17,13 @@ public class TraineeMain {
 		store.put(cs.getId(),cs);
 		store.put(ece.getId(), ece);
 		for(Trainee trainee:store.values()) {
-			Trainee traineedetails=(Trainee) trainee;
-			boolean iscs= traineedetails instanceof CsTrainee;
+			
+			boolean iscs= trainee instanceof CsTrainee;
 			if(iscs) {
-				cstrainee.add((CsTrainee) traineedetails);
+				cstrainee.add((CsTrainee) trainee);
 			}
 			else {
-				ecetrainee.add((EceTrainee) traineedetails);
+				ecetrainee.add((EceTrainee) trainee);
 			}
 		}
 		System.out.println("*******diplay cstrainees******");
